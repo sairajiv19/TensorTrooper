@@ -16,6 +16,7 @@ class Company(BaseModel):
     id: UUID = Field(default_factory=uuid4)
     company_name: str
     domain: AnyUrl
+    admin_email: EmailStr
     users: List[UUID] = Field(default_factory=list)  # Reference to User.Id only
 
 
