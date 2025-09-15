@@ -1,4 +1,4 @@
-from schemas import CompanyWrite, CompanyRead
+from schemas import CompanyWrite, CompanyRead, UserWrite
 from pydantic import AnyUrl, EmailStr
 from uuid import uuid4
 import asyncpg
@@ -24,5 +24,6 @@ class CompanyRepository:
         pass
     
     @staticmethod
-    async def add_users():
+    async def add_users(connection: asyncpg.Connection, company: UserWrite):
+        
         pass
