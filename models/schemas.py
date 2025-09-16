@@ -46,3 +46,14 @@ class UserWrite(BaseModel):
     password: str
     phone_number: Optional[str] = None
     role: Role = Role.user
+
+
+# Update Schema
+class UserUpdate(BaseModel):
+    username: Optional[str]
+    first_name: Optional[str]
+    last_name: Optional[str]
+    email: Optional[EmailStr]
+    password: Optional[str]
+    phone_number: Optional[str] = None
+    role: Optional[Role]
